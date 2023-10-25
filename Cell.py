@@ -57,9 +57,9 @@ class Cell:
         to_x_mid = (to_cell._x1 + to_cell._x2) / 2
         to_y_mid = (to_cell._y1 + to_cell._y2) / 2
 
-        fill_color = "green"
+        fill_color = "red"
         if undo:
-            fill_color = "red"
+            fill_color = "gray"
 
         # moving left
         if self._x1 > to_cell._x1:
@@ -88,6 +88,3 @@ class Cell:
             self._win.draw_line(line, fill_color)
             line = Line(Point(to_x_mid, to_y_mid), Point(to_x_mid, to_cell._y1))
             self._win.draw_line(line, fill_color)
-
-
-
